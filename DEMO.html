@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shrinal Shigvan | Elite Web Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+width:100%;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 10%;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(15px);
+z-index:1000;
+}
+
+nav h2{
+color:#00f7ff;
+letter-spacing:2px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+font-weight:500;
+}
+
+nav ul li a:hover{
+color:#00f7ff;
+}
+
+/* HERO */
+section{
+padding:120px 10%;
+min-height:100vh;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:48px;
+}
+
+.hero-text span{
+color:#00f7ff;
+}
+
+.hero-text h3{
+margin-top:10px;
+font-weight:400;
+}
+
+.hero-text p{
+margin-top:15px;
+line-height:1.6;
+max-width:500px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 25px;
+background:#00f7ff;
+color:black;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:0.4s;
+box-shadow:0 0 20px #00f7ff;
+}
+
+.btn:hover{
+background:white;
+box-shadow:0 0 30px white;
+}
+.social-icons{
+margin-top:25px;
+display:flex;
+gap:20px;
+}
+
+.social-icons a{
+font-size:28px;
+color:#00f7ff;
+transition:0.3s;
+}
+
+.social-icons a:hover{
+color:white;
+transform:translateY(-5px);
+}
+
+.hero-img{
+flex:1;
+text-align:center;
+}
+
+.hero-img img{
+width:320px;
+border-radius:20px;
+animation:float 3s ease-in-out infinite;
+box-shadow:0 0 40px #00f7ff;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+/* SECTION TITLE */
+.section-title{
+text-align:center;
+margin-bottom:50px;
+font-size:32px;
+color:#00f7ff;
+}
+
+/* SKILLS */
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+
+.skill-card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+text-align:center;
+border-radius:20px;
+transition:0.4s;
+backdrop-filter:blur(10px);
+}
+
+.skill-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px #00f7ff;
+}
+
+.skill-card i{
+font-size:45px;
+margin-bottom:15px;
+color:#00f7ff;
+}
+
+/* PROJECTS */
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.project-card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:20px;
+transition:0.4s;
+}
+
+.project-card:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #00f7ff;
+}
+
+.project-card h3{
+color:#00f7ff;
+margin-bottom:10px;
+}
+
+/* CONTACT */
+.contact-form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:12px;
+border:none;
+border-radius:10px;
+outline:none;
+}
+
+.contact-form button{
+padding:12px;
+background:#00f7ff;
+border:none;
+border-radius:25px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+background:white;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:rgba(0,0,0,0.6);
+}
+
+@media(max-width:768px){
+.hero{
+flex-direction:column;
+text-align:center;
+}
+.hero-img{
+margin-top:40px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Shrinal Shigvan</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section id="home" class="hero">
+<div class="hero-text">
+<h1>Hello, I'm <span>Shrinal Shigvan</span></h1>
+<h3><span id="typing"></span></h3>
+<p>I create modern, responsive and beautiful web experiences with powerful functionality.</p>
+<a href="#contact" class="btn">Hire Me</a>
+<div class="social-icons">
+  
+<a href="https://github.com/shrinalshigvan23" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://linkedin.com/in/shrinal-shigvan-4310563ab" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+</div>
+
+</div>
+
+<div class="hero-img">
+<img src="profile.png" alt="Shrinal" width="300">
+</div>
+</section>
+
+<section id="skills">
+<h2 class="section-title">Programming Skills</h2>
+<div class="skills-grid">
+
+<div class="skill-card">
+<i class="fab fa-html5"></i>
+<h3>HTML</h3>
+</div>
+
+<div class="skill-card">
+<i class="fab fa-css3-alt"></i>
+<h3>CSS</h3>
+</div>
+
+<div class="skill-card">
+<i class="fab fa-js"></i>
+<h3>JavaScript</h3>
+</div>
+
+<div class="skill-card">
+<i class="fab fa-python"></i>
+<h3>Python</h3>
+</div>
+
+<div class="skill-card">
+<i class="fab fa-java"></i>
+<h3>Java</h3>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-database"></i>
+<h3>MySQL</h3>
+</div>
+
+</div>
+</section>
+
+<section id="projects">
+<h2 class="section-title">Elite Projects</h2>
+<div class="projects-grid">
+
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>Premium animated portfolio with glassmorphism UI.</p>
+</div>
+
+<div class="project-card">
+<h3>E-Commerce UI</h3>
+<p>Responsive modern shopping interface design.</p>
+</div>
+
+<div class="project-card">
+<h3>Management System</h3>
+<p>Backend powered student management application.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Contact Me</h2>
+
+<form class="contact-form">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+© 2026 Shrinal Shigvan | Elite Web Developer
+</footer>
+
+<script>
+var typed = new Typed("#typing", {
+strings: ["Elite Web Developer", "UI Designer", "Creative Coder"],
+typeSpeed: 60,
+backSpeed: 40,
+loop: true
+});
+</script>
+
+</body>
+</html>  
